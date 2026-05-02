@@ -33,7 +33,7 @@ export default function WaitlistForm({ source }: WaitlistFormProps) {
           autoComplete="email"
         />
         <button type="submit" disabled={submitted}>
-          {submitted ? "✓ Added" : source === "cta" ? "Request access" : "Join waitlist"}
+          {submitted ? "✓ Added" : source === "cta" ? "Join waitlist" : "Join waitlist"}
         </button>
       </form>
       {source === "cta" && (

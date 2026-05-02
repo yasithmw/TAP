@@ -5,15 +5,13 @@ export default function Footer() {
         <div className="foot">
           <div className="foot-logo">The Artist Platform</div>
           <div className="foot-links">
-            <a href="#how">How it works</a>
-            <a href="#who">For whom</a>
-            <a href="#waitlist">Waitlist</a>
-            <a href="#">Contact</a>
+            <span className="foot-connect-label">Connect with us</span>
+            <a href="mailto:support@theartistplatform.com.au" className="foot-email">support@theartistplatform.com.au</a>
           </div>
         </div>
         <div className="foot-meta">
           <span>© 2026 The Artist Platform · Sydney, Australia</span>
-          <span>theartistplatform.com.au</span>
+          <span>Designed &amp; Developed By <a href="https://kainovation.com" target="_blank" rel="noopener noreferrer" style={{color: '#fff', fontWeight: 700}}>Kainovation Ltd.</a></span>
         </div>
       </div>
     </footer>

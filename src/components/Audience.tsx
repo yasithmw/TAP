@@ -10,26 +10,26 @@ export default function Audience() {
           {/* Artists */}
           <div className="aud-card aud-artists">
             <div className="aud-label">For artists</div>
-            <h3>Get paid <em>to play.</em></h3>
-            <p>A professional profile that does the pitching for you. Real venues, real fees, real bookings.</p>
+            <h3>Access more opportunities <em>to play.</em></h3>
+            <p>Build a professional profile that does the pitching for you - helping you get discovered, connect with real venues, and build your live experience.</p>
             <ul className="aud-features">
-              <li>Standardised EPK &amp; media</li>
-              <li>Direct offers from venues</li>
-              <li>Milestone-based progression</li>
-              <li>Networking &amp; collaborations</li>
+              <li>Standardised EPK &amp; gallery system</li>
+              <li>Direct opportunities &amp; offers</li>
+              <li>Artist development  &amp; progression</li>
+              <li>Industry Networking</li>
             </ul>
           </div>
 
           {/* Venues */}
           <div className="aud-card aud-venues">
             <div className="aud-label">For venues</div>
-            <h3>Book the <em>right</em> act — faster.</h3>
-            <p>Stop scrolling. Search verified artists by genre, draw, fee and fit. Fill your calendar in minutes.</p>
+            <h3>Book <em>more easier.</em></h3>
+            <p>Stop scrolling. Search verified artists by genre, style, and fit - and fill your calendar with confidence.</p>
             <ul className="aud-features">
-              <li>Advanced filtering &amp; shortlists</li>
-              <li>Verified performance data</li>
-              <li>One-click offers &amp; messaging</li>
-              <li>Calendar &amp; pipeline tools</li>
+              <li>Advanced filtering</li>
+              <li>Verified artist data</li>
+              <li>One-click offers</li>
+              <li>Booking &amp; pipeline tools</li>
             </ul>
           </div>
 

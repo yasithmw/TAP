@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const roles = [
   { key: "artist", label: "I'm an artist" },
-  { key: "venue", label: "I'm a venue" },
+  { key: "venue", label: "It's a venue" },
 ];
 
 export default function RoleSelector() {

@@ -45,14 +45,14 @@ body {
 .logo {
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;
-  font-size: 26px;
+  font-size: 31px;
   letter-spacing: 0.02em;
   color: var(--ink);
   text-decoration: none;
   display: flex; align-items: center; gap: 10px;
 }
 .logo-mark {
-  width: 38px; height: 38px;
+  width: 46px; height: 46px;
   border: 1.5px solid var(--gold);
   border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
@@ -270,6 +270,10 @@ h1.hero-title em {
   font-weight: 500;
   white-space: nowrap;
 }
+.badge-status.gray {
+  background: rgba(255,255,255,0.12);
+  color: rgba(237,232,223,0.75);
+}
 .card-artist-body {
   background: var(--cream-soft);
   color: var(--ink);
@@ -485,6 +489,9 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   background: var(--ink);
   padding: 40px 32px;
   transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .problem-item:hover { background: var(--slate); }
 .problem-num {
@@ -783,7 +790,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   color: var(--cream);
 }
 .foot-links {
-  display: flex; gap: 32px;
+  display: flex; gap: 16px; align-items: center;
 }
 .foot-links a {
   color: rgba(237,232,223,0.55);
@@ -794,6 +801,20 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   transition: color 0.2s;
 }
 .foot-links a:hover { color: var(--gold); }
+.foot-connect-label {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: rgba(237,232,223,0.4);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.foot-links a.foot-email {
+  font-family: var(--font-mono), monospace;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
 .foot-meta {
   font-family: var(--font-mono), monospace;
   font-size: 11px;

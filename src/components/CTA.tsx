@@ -8,8 +8,7 @@ export default function CTA() {
         <div className="eyebrow">Launching July 2026</div>
         <h2>Be one of the first <em>inside.</em></h2>
         <p>
-          Early members get priority onboarding, founding-artist status, and direct
-          input on what we build next. No noise, no spam — just the launch signal.
+          Be first to access TAP, with priority onboarding and early access to real opportunities.
         </p>
 
         <RoleSelector />
