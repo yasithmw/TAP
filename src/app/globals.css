@@ -178,6 +178,7 @@ h1.hero-title em {
   padding: 14px 28px;
   border-radius: 999px;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
 .waitlist-form button:hover { background: var(--gold); color: var(--ink); }
@@ -277,7 +278,7 @@ h1.hero-title em {
 .card-artist-body {
   background: var(--cream-soft);
   color: var(--ink);
-  padding: 22px 26px;
+  padding: 32px 26px;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .tag {
@@ -320,8 +321,8 @@ h1.hero-title em {
 .card-venue {
   bottom: 0; right: 0;
   width: 280px;
-  background: var(--midnight);
-  color: var(--cream);
+  background: #e8e8e8;
+  color: var(--ink);
   padding: 22px;
   transform: rotate(2.5deg);
   transition: transform 0.5s cubic-bezier(.2,.9,.3,1);
@@ -345,11 +346,11 @@ h1.hero-title em {
 .venue-meta {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
   font-size: 11px;
-  color: rgba(237,232,223,0.65);
+  color: rgba(13,13,13,0.55);
 }
 .venue-meta strong {
   display: block;
-  color: var(--cream);
+  color: #0d0d0d;
   font-size: 13px;
   font-weight: 500;
   margin-top: 2px;
@@ -478,6 +479,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
   gap: 1px;
   background: rgba(237,232,223,0.1);
   border: 1px solid rgba(237,232,223,0.1);
@@ -489,9 +491,10 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   background: var(--ink);
   padding: 40px 32px;
   transition: background 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  align-content: center;
 }
 .problem-item:hover { background: var(--slate); }
 .problem-num {
@@ -517,7 +520,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
 
 /* ====== SOLUTION / HOW IT WORKS ====== */
 .solution {
-  background: var(--cream-soft);
+  background: var(--cream);
 }
 .steps {
   display: grid;
@@ -563,7 +566,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
 
 /* ====== FOR WHO ====== */
 .audience {
-  background: var(--cream);
+  background: var(--cream-soft);
   padding: 120px 0;
 }
 .audience-grid {
@@ -587,8 +590,11 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   color: var(--cream);
 }
 .aud-venues {
+  /* Original colors — uncomment to restore:
   background: var(--midnight);
-  color: var(--cream);
+  color: var(--cream); */
+  background: #e8e8e8;
+  color: var(--ink);
 }
 
 .aud-label {
@@ -634,6 +640,12 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   font-family: var(--font-mono), monospace;
 }
 .aud-features li:last-child { border-bottom: none; }
+
+/* For venues card — grey theme overrides */
+.aud-venues .aud-label { color: var(--gold-light); }
+.aud-venues p { color: rgba(13,13,13,0.65); }
+.aud-venues .aud-features { border-top-color: rgba(13,13,13,0.12); }
+.aud-venues .aud-features li { color: rgba(13,13,13,0.8); border-bottom-color: rgba(13,13,13,0.08); }
 
 /* ====== STATS ====== */
 .stats-section {
@@ -711,22 +723,42 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   margin-bottom: 40px;
 }
 
-.cta .waitlist-form {
+.waitlist-form--cta {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  gap: 12px;
+  width: 100%;
+  max-width: 680px;
   margin: 0 auto;
-  background: rgba(237,232,223,0.06);
-  border-color: rgba(237,232,223,0.15);
+  justify-content: center;
 }
-.cta .waitlist-form input { color: var(--cream); }
-.cta .waitlist-form input::placeholder { color: rgba(237,232,223,0.45); }
-.cta .waitlist-form:focus-within {
+.waitlist-form--cta:focus-within {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.waitlist-form--cta input {
+  flex: none;
+  background: rgba(237,232,223,0.06);
+  border: 1px solid rgba(237,232,223,0.25);
+  border-radius: 999px;
+  padding: 14px 22px;
+  color: var(--cream);
+  transition: border-color 0.2s, background 0.2s;
+}
+.waitlist-form--cta input::placeholder { color: rgba(237,232,223,0.45); }
+.waitlist-form--cta input:focus {
+  outline: none;
   border-color: var(--gold);
   background: rgba(237,232,223,0.1);
 }
-.cta .waitlist-form button {
+.waitlist-form--cta button {
   background: var(--gold);
   color: var(--ink);
 }
-.cta .waitlist-form button:hover {
+.waitlist-form--cta button:hover {
   background: var(--gold-light);
 }
 .cta-meta {

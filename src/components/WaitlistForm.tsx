@@ -12,11 +12,12 @@ export default function WaitlistForm({ source }: WaitlistFormProps) {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const input = form.querySelector("input") as HTMLInputElement;
-    if (!input.value.trim()) return;
+    const inputs = form.querySelectorAll("input");
+    const emailInput = form.querySelector("input[type=email]") as HTMLInputElement;
+    if (!emailInput.value.trim()) return;
 
     setSubmitted(true);
-    input.value = "";
+    inputs.forEach((input) => { input.value = ""; });
 
     setTimeout(() => {
       setSubmitted(false);
@@ -25,12 +26,31 @@ export default function WaitlistForm({ source }: WaitlistFormProps) {
 
   return (
     <>
-      <form className="waitlist-form" onSubmit={handleSubmit}>
+      <form className={`waitlist-form${source === "cta" ? " waitlist-form--cta" : ""}`} onSubmit={handleSubmit}>
+        {source === "cta" && (
+          <input
+            type="text"
+            placeholder="Enter your name"
+            autoComplete="given-name"
+            style={{
+              width: "200px",
+              height: "52px",
+              padding: "14px 22px",
+              borderRadius: "999px",
+            }}
+          />
+        )}
         <input
           type="email"
           placeholder={source === "cta" ? "Enter your email" : "you@yourdomain.com"}
           required
           autoComplete="email"
+          style={{
+            width: "250px",
+            height: "52px",
+            padding: "14px 22px",
+            borderRadius: "999px",
+          }}
         />
         <button type="submit" disabled={submitted}>
           {submitted ? "✓ Added" : source === "cta" ? "Join waitlist" : "Join waitlist"}
