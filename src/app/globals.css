@@ -321,8 +321,8 @@ h1.hero-title em {
 .card-venue {
   bottom: 0; right: 0;
   width: 280px;
-  background: #e8e8e8;
-  color: var(--ink);
+  background: #0D0D0DE5;
+  color: var(--cream);
   padding: 22px;
   transform: rotate(2.5deg);
   transition: transform 0.5s cubic-bezier(.2,.9,.3,1);
@@ -344,14 +344,14 @@ h1.hero-title em {
   line-height: 1.25;
   margin-bottom: 14px;
 }
-.venue-meta {
+.card-venue .venue-meta {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
   font-size: 11px;
-  color: rgba(13,13,13,0.55);
+  color: rgba(255,255,255,0.6);
 }
-.venue-meta strong {
+.card-venue .venue-meta strong {
   display: block;
-  color: #0d0d0d;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 500;
   margin-top: 2px;
@@ -591,11 +591,8 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   color: var(--cream);
 }
 .aud-venues {
-  /* Original colors — uncomment to restore:
-  background: var(--midnight);
-  color: var(--cream); */
-  background: #e8e8e8;
-  color: var(--ink);
+  background: #0D0D0DE5;
+  color: var(--cream);
 }
 
 .aud-label {
@@ -643,11 +640,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
 }
 .aud-features li:last-child { border-bottom: none; }
 
-/* For venues card — grey theme overrides */
-.aud-venues .aud-label { color: var(--gold-light); }
-.aud-venues p { color: rgba(13,13,13,0.65); }
-.aud-venues .aud-features { border-top-color: rgba(13,13,13,0.12); }
-.aud-venues .aud-features li { color: rgba(13,13,13,0.8); border-bottom-color: rgba(13,13,13,0.08); }
+/* For venues card — inherits dark card styles from .aud-artists */
 
 /* ====== STATS ====== */
 .stats-section {
