@@ -1,15 +1,21 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+
+const successMessages: Record<string, string> = {
+  artist: "Welcome aboard. The live music industry just got a little easier to break into — we're glad you're here.",
+  venue: "Welcome to TAP. Finding the right act just got a whole lot simpler — we're excited to have you.",
+};
 
 interface WaitlistFormProps {
   source: "hero" | "cta";
+  role?: string;
 }
 
-export default function WaitlistForm({ source }: WaitlistFormProps) {
+export default function WaitlistForm({ source, role = "artist" }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: { preventDefault(): void; currentTarget: HTMLFormElement }) {
     e.preventDefault();
     const form = e.currentTarget;
     const inputs = form.querySelectorAll("input");
@@ -53,12 +59,12 @@ export default function WaitlistForm({ source }: WaitlistFormProps) {
           }}
         />
         <button type="submit" disabled={submitted}>
-          {submitted ? "✓ Added" : source === "cta" ? "Join waitlist" : "Join waitlist"}
+          {submitted ? "✓ Request Sent" : source === "cta" ? "Join waitlist" : "Join waitlist"}
         </button>
       </form>
       {source === "cta" && (
-        <div className={`success-msg${submitted ? " show" : ""}`} >
-          ✓ You&apos;re on the list. We&apos;ll be in touch as soon as applications open in your city.
+        <div className={`success-msg${submitted ? " show" : ""}`}>
+          ✓ {successMessages[role] ?? successMessages.artist}
         </div>
       )}
     </>

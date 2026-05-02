@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import RoleSelector from "./RoleSelector";
 import WaitlistForm from "./WaitlistForm";
 
 export default function CTA() {
+  const [role, setRole] = useState("artist");
+
   return (
     <section className="cta" id="waitlist">
       <div className="container cta-inner">
@@ -11,8 +16,8 @@ export default function CTA() {
           Be first to access TAP, with priority onboarding and early access to real opportunities.
         </p>
 
-        <RoleSelector />
-        <WaitlistForm source="cta" />
+        <RoleSelector role={role} onRoleChange={setRole} />
+        <WaitlistForm source="cta" role={role} />
 
         <div className="cta-meta">
           <span>

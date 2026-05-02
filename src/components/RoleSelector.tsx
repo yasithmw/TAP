@@ -1,24 +1,25 @@
 "use client";
 
-import { useState } from "react";
-
 const roles = [
   { key: "artist", label: "I'm an artist" },
   { key: "venue", label: "It's a venue" },
 ];
 
-export default function RoleSelector() {
-  const [active, setActive] = useState("artist");
+interface RoleSelectorProps {
+  role: string;
+  onRoleChange: (role: string) => void;
+}
 
+export default function RoleSelector({ role, onRoleChange }: RoleSelectorProps) {
   return (
     <div className="role-select" role="tablist">
-      {roles.map((role) => (
+      {roles.map((r) => (
         <button
-          key={role.key}
-          onClick={() => setActive(role.key)}
-          className={`role-chip${active === role.key ? " active" : ""}`}
+          key={r.key}
+          onClick={() => onRoleChange(r.key)}
+          className={`role-chip${role === r.key ? " active" : ""}`}
         >
-          {role.label}
+          {r.label}
         </button>
       ))}
     </div>
