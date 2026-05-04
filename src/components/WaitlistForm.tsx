@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import WaitlistModal from "./WaitlistModal";
 
 const successMessages: Record<string, string> = {
   artist: "Welcome aboard. The live music industry just got a little easier to break into — we're glad you're here.",
@@ -14,36 +15,39 @@ interface WaitlistFormProps {
 
 export default function WaitlistForm({ source, role = "artist" }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [heroEmail, setHeroEmail] = useState("");
 
-  function handleSubmit(e: { preventDefault(): void; currentTarget: HTMLFormElement }) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const inputs = form.querySelectorAll("input");
     const emailInput = form.querySelector("input[type=email]") as HTMLInputElement;
     if (!emailInput.value.trim()) return;
 
+    if (source === "hero") {
+      setHeroEmail(emailInput.value.trim());
+      setModalOpen(true);
+      return;
+    }
+
+    const inputs = form.querySelectorAll("input");
     setSubmitted(true);
     inputs.forEach((input) => { input.value = ""; });
-
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3500);
+    setTimeout(() => { setSubmitted(false); }, 3500);
   }
 
   return (
     <>
-      <form className={`waitlist-form${source === "cta" ? " waitlist-form--cta" : ""}`} onSubmit={handleSubmit}>
+      <form
+        className={`waitlist-form${source === "cta" ? " waitlist-form--cta" : ""}`}
+        onSubmit={handleSubmit}
+      >
         {source === "cta" && (
           <input
             type="text"
             placeholder="Enter your name"
             autoComplete="given-name"
-            style={{
-              width: "200px",
-              height: "52px",
-              padding: "14px 22px",
-              borderRadius: "999px",
-            }}
+            style={{ width: "200px", height: "52px", padding: "14px 22px", borderRadius: "999px" }}
           />
         )}
         <input
@@ -51,21 +55,24 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
           placeholder={source === "cta" ? "Enter your email" : "you@yourdomain.com"}
           required
           autoComplete="email"
-          style={{
-            width: "250px",
-            height: "52px",
-            padding: "14px 22px",
-            borderRadius: "999px",
-          }}
+          style={{ width: "250px", height: "52px", padding: "14px 22px", borderRadius: "999px" }}
         />
         <button type="submit" disabled={submitted}>
-          {submitted ? "✓ Request Sent" : source === "cta" ? "Join waitlist" : "Join waitlist"}
+          {submitted ? "✓ Request Sent" : "Join waitlist"}
         </button>
       </form>
+
       {source === "cta" && (
         <div className={`success-msg${submitted ? " show" : ""}`}>
           ✓ {successMessages[role] ?? successMessages.artist}
         </div>
+      )}
+
+      {modalOpen && (
+        <WaitlistModal
+          email={heroEmail}
+          onClose={() => setModalOpen(false)}
+        />
       )}
     </>
   );
