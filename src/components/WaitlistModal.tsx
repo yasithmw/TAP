@@ -111,7 +111,7 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
         ) : (
           <div className="modal-success">
             <div className="modal-success-icon">✓</div>
-            <h2 className="modal-title">You&rsquo;re on<br /><em>the list.</em></h2>
+            <h2 className="modal-title modal-title--success">You&rsquo;re on <em>the list.</em></h2>
             <p className="modal-sub">{successMessages[role]}</p>
           </div>
         )}

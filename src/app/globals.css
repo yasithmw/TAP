@@ -1068,7 +1068,7 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   margin: 0 auto 24px;
   border: 1.5px solid rgba(106,174,123,0.25);
 }
-.modal-success .modal-title { margin-bottom: 14px; }
+.modal-title--success { font-size: clamp(32px, 4vw, 38px); white-space: nowrap; margin-bottom: 14px; }
 .modal-success .modal-sub { margin-bottom: 0; }
 
 /* Reveal animations on load */
