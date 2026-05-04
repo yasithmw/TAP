@@ -92,6 +92,7 @@ body {
 .hero {
   position: relative;
   padding: 160px 0 100px;
+  min-height: calc(100vh - 80px);
   overflow: hidden;
 }
 .hero-grid {
@@ -811,13 +812,17 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   flex-wrap: wrap; gap: 24px;
 }
 .foot-logo {
+  display: flex; align-items: center; gap: 12px;
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;
   font-size: 22px;
   color: var(--cream);
 }
 .foot-links {
-  display: flex; gap: 16px; align-items: center;
+  display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
+}
+.foot-connect {
+  display: flex; flex-direction: row; gap: 16px; align-items: center;
 }
 .foot-links a {
   color: rgba(237,232,223,0.55);
@@ -842,6 +847,16 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
   font-size: 12px;
   font-weight: 700;
 }
+.foot-social {
+  display: flex; flex-direction: row; gap: 16px; align-items: center;
+}
+.foot-social a {
+  display: inline-flex; align-items: center;
+  color: var(--gold-pale);
+  text-transform: none; letter-spacing: 0;
+  transition: color 0.2s;
+}
+.foot-social a:hover { color: var(--gold-light); }
 .foot-meta {
   font-family: var(--font-mono), monospace;
   font-size: 11px;
