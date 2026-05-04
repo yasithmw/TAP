@@ -47,7 +47,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
             type="text"
             placeholder="Enter your name"
             autoComplete="given-name"
-            style={{ width: "200px", height: "52px", padding: "14px 22px", borderRadius: "999px" }}
+            className="waitlist-input"
           />
         )}
         <input
@@ -55,7 +55,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
           placeholder={source === "cta" ? "Enter your email" : "you@yourdomain.com"}
           required
           autoComplete="email"
-          style={{ width: "250px", height: "52px", padding: "14px 22px", borderRadius: "999px" }}
+          className="waitlist-input"
         />
         <button type="submit" disabled={submitted}>
           {submitted ? "✓ Request Sent" : "Join waitlist"}

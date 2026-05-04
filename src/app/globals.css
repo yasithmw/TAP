@@ -167,6 +167,9 @@ h1.hero-title em {
   color: var(--ink);
 }
 .waitlist-form input::placeholder { color: #999; }
+.waitlist-input { width: 250px; height: 52px; padding: 14px 22px; border-radius: 999px; }
+.waitlist-form--cta .waitlist-input { width: 200px; height: 52px; padding: 14px 22px; border-radius: 999px; }
+.waitlist-form--cta .waitlist-input + .waitlist-input { width: 250px; }
 .waitlist-form button {
   border: none;
   background: var(--gold);
@@ -1070,6 +1073,77 @@ h2.section-title em { font-style: italic; color: var(--gold); font-weight: 300; 
 }
 .modal-title--success { font-size: clamp(32px, 4vw, 38px); white-space: nowrap; margin-bottom: 14px; }
 .modal-success .modal-sub { margin-bottom: 0; }
+
+/* ====== MOBILE ====== */
+
+/* Prevent horizontal scroll */
+html { overflow-x: hidden; }
+
+/* Nav */
+@media (max-width: 560px) {
+  .logo { font-size: 21px; gap: 8px; }
+  .btn-nav { padding: 9px 16px; font-size: 11px; letter-spacing: 0.1em; }
+}
+
+/* Hero */
+@media (max-width: 600px) {
+  .hero { padding: 110px 0 60px; }
+  .hero-visual { display: none; }
+  .hero-sub { font-size: 16px; margin-bottom: 28px; }
+  .waitlist-meta { white-space: normal; flex-wrap: wrap; font-size: 10px; }
+}
+
+/* Waitlist form — stack vertically */
+@media (max-width: 560px) {
+  .waitlist-form {
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 10px;
+    gap: 8px;
+    max-width: 100%;
+  }
+  .waitlist-form input {
+    width: 100% !important;
+    height: auto !important;
+    padding: 13px 18px !important;
+    border-radius: 8px !important;
+  }
+  .waitlist-form button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 13px 20px;
+  }
+  /* CTA form */
+  .waitlist-form--cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .waitlist-form--cta input {
+    width: 100% !important;
+    border-radius: 10px !important;
+  }
+  .waitlist-form--cta button {
+    width: 100%;
+  }
+  /* CTA meta — stack checkmarks */
+  .cta-meta { flex-direction: column; align-items: center; gap: 12px; }
+}
+
+/* Problem grid already 1 col at 520px — covered */
+/* Steps already 1 col at 560px — covered */
+/* Audience already 1 col at 720px — covered */
+
+/* Stats — tighter on small screens */
+@media (max-width: 480px) {
+  .stats-grid { gap: 28px 20px; }
+  .stat-num { font-size: 42px; }
+}
+
+/* Modal — scale heading on small screens */
+@media (max-width: 480px) {
+  .modal-card { padding: 28px 20px 24px; }
+  .modal-title { font-size: 30px; }
+}
 
 /* Reveal animations on load */
 .reveal { opacity: 0; transform: translateY(20px); animation: reveal 0.9s cubic-bezier(.2,.9,.3,1) forwards; }
