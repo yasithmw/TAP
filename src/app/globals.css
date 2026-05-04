@@ -1093,39 +1093,35 @@ html { overflow-x: hidden; }
   .waitlist-meta { white-space: normal; flex-wrap: wrap; font-size: 10px; }
 }
 
-/* Waitlist form — stack vertically */
+/* Hero form — full-width pill, keep horizontal layout */
 @media (max-width: 560px) {
   .waitlist-form {
-    flex-direction: column;
-    border-radius: 14px;
-    padding: 10px;
-    gap: 8px;
     max-width: 100%;
   }
-  .waitlist-form input {
-    width: 100% !important;
-    height: auto !important;
-    padding: 13px 18px !important;
-    border-radius: 8px !important;
+  .waitlist-form .waitlist-input {
+    min-width: 0;
+    width: auto;
   }
-  .waitlist-form button {
-    width: 100%;
-    border-radius: 8px;
-    padding: 13px 20px;
-  }
-  /* CTA form */
+}
+
+/* CTA form — stack as individual full-width pills */
+@media (max-width: 560px) {
   .waitlist-form--cta {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+    max-width: 100%;
   }
-  .waitlist-form--cta input {
+  .waitlist-form--cta .waitlist-input {
     width: 100% !important;
-    border-radius: 10px !important;
+    border-radius: 999px !important;
+    height: 52px;
+    padding: 14px 22px;
   }
   .waitlist-form--cta button {
     width: 100%;
+    border-radius: 999px;
   }
-  /* CTA meta — stack checkmarks */
   .cta-meta { flex-direction: column; align-items: center; gap: 12px; }
 }
 
