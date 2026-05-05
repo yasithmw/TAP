@@ -12,7 +12,7 @@ export default function Nav() {
           <a href="#problem">Why TAP</a>
           <a href="#how">How it works</a>
           <a href="#who">For whom</a>
-          <a href="#waitlist" className="btn-nav">Join the waitlist</a>
+          <a href="#waitlist" className="btn-nav">Join waitlist</a>
         </div>
       </div>
     </nav>
