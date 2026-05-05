@@ -853,7 +853,7 @@ h2.section-title em {
 /* ====== FOR WHO ====== */
 .audience {
   background: var(--cream-soft);
-  padding: 120px 0;
+  padding: 72px 0 120px;
 }
 
 .audience-grid {
