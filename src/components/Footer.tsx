@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="foot">
           <div className="foot-logo">
-            <Image src="/TAP_Logo.svg" alt="TAP" width={40} height={40} />
+            <Image src="/Primary.svg" alt="TAP" width={40} height={40} />
             The Artist Platform
           </div>
           <div className="foot-links">
