@@ -1576,7 +1576,7 @@ html {
 /* Nav */
 @media (max-width: 560px) {
   .logo {
-    font-size: 20px;
+    font-size: 24px;
     gap: 8px;
     white-space: nowrap;
   }
