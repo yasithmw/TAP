@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import WaitlistModal from "./WaitlistModal";
 
 const successMessages: Record<string, string> = {
@@ -17,6 +17,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
   const [submitted, setSubmitted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [heroEmail, setHeroEmail] = useState("");
+  const emailRef = useRef<HTMLInputElement>(null);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -27,6 +28,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
     if (source === "hero") {
       setHeroEmail(emailInput.value.trim());
       setModalOpen(true);
+      if (emailRef.current) emailRef.current.value = "";
       return;
     }
 
@@ -51,8 +53,9 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
           />
         )}
         <input
+          ref={emailRef}
           type="email"
-          placeholder={source === "cta" ? "Enter your email" : "you@yourdomain.com"}
+          placeholder="Enter your email"
           required
           autoComplete="email"
           className="waitlist-input"
