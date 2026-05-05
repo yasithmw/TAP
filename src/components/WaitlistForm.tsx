@@ -27,6 +27,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
     if (source === "hero") {
       setHeroEmail(emailInput.value.trim());
       setModalOpen(true);
+      emailInput.value = "";
       return;
     }
 
