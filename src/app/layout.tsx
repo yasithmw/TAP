@@ -17,12 +17,12 @@ const inter = Inter({
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "The Artist Platform — Where Musicians Meet Opportunity",
+  title: "The Artist Platform - Where Musicians & Opportunity Meet",
   description:
     "A gate-kept network for serious artists and the venues, labels and managers looking for them.",
 };

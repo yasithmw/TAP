@@ -1,45 +1,78 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+import WaitlistModal from "./WaitlistModal";
+
+const successMessages: Record<string, string> = {
+  artist: "Welcome aboard. The live music industry just got a little easier to break into — we're glad you're here.",
+  venue: "Welcome to TAP. Finding the right act just got a whole lot simpler — we're excited to have you.",
+};
 
 interface WaitlistFormProps {
   source: "hero" | "cta";
+  role?: string;
 }
 
-export default function WaitlistForm({ source }: WaitlistFormProps) {
+export default function WaitlistForm({ source, role = "artist" }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [heroEmail, setHeroEmail] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const input = form.querySelector("input") as HTMLInputElement;
-    if (!input.value.trim()) return;
+    const emailInput = form.querySelector("input[type=email]") as HTMLInputElement;
+    if (!emailInput.value.trim()) return;
 
+    if (source === "hero") {
+      setHeroEmail(emailInput.value.trim());
+      setModalOpen(true);
+      return;
+    }
+
+    const inputs = form.querySelectorAll("input");
     setSubmitted(true);
-    input.value = "";
-
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3500);
+    inputs.forEach((input) => { input.value = ""; });
+    setTimeout(() => { setSubmitted(false); }, 3500);
   }
 
   return (
     <>
-      <form className="waitlist-form" onSubmit={handleSubmit}>
+      <form
+        className={`waitlist-form${source === "cta" ? " waitlist-form--cta" : ""}`}
+        onSubmit={handleSubmit}
+      >
+        {source === "cta" && (
+          <input
+            type="text"
+            placeholder="Enter your name"
+            autoComplete="given-name"
+            className="waitlist-input"
+          />
+        )}
         <input
           type="email"
           placeholder="Enter your email"
           required
           autoComplete="email"
+          className="waitlist-input"
         />
         <button type="submit" disabled={submitted}>
-          {submitted ? "✓ Added" : source === "cta" ? "Request access" : "Join waitlist"}
+          {submitted ? "✓ Request Sent" : "Join waitlist"}
         </button>
       </form>
+
       {source === "cta" && (
-        <div className={`success-msg${submitted ? " show" : ""}`} >
-          ✓ You&apos;re on the list. We&apos;ll be in touch as soon as applications open in your city.
+        <div className={`success-msg${submitted ? " show" : ""}`}>
+          ✓ {successMessages[role] ?? successMessages.artist}
         </div>
+      )}
+
+      {modalOpen && (
+        <WaitlistModal
+          email={heroEmail}
+          onClose={() => setModalOpen(false)}
+        />
       )}
     </>
   );

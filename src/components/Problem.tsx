@@ -2,34 +2,28 @@ export default function Problem() {
   return (
     <section className="problem" id="problem">
       <div className="container">
-        <div className="section-label">The problem</div>
-        <h2 className="section-title">Talent discovery is <em>broken</em>.</h2>
+        <div className="section-label">The Disconnect</div>
+        <h2 className="section-title">The live music industry has been <em> <br />left behind.</em></h2>
         <p className="section-intro">
-          Cold emails. TikTok scouting. Word-of-mouth. The live music industry runs
-          on fragmented channels with no standard way to assess who&apos;s ready,
-          relevant, or worth booking.
+          Artist discovery in the live music industry is unstructured and inefficient, leaving a gap between artists and the industry.
         </p>
 
         <div className="problem-grid">
           <div className="problem-item">
-            <div className="problem-num">01</div>
             <h3>No structured access</h3>
-            <p>Artists have no reliable way to reach venues outside of personal networks and DMs.</p>
+            <p>Artists have no reliable way to reach venues beyond personal networks, word of mouth, and direct outreach.</p>
           </div>
           <div className="problem-item">
-            <div className="problem-num">02</div>
             <h3>No efficient evaluation</h3>
-            <p>Venues waste hours sifting through Instagram pages with no context on quality or fit.</p>
+            <p>Venues spend hours reviewing scattered content with no consistent way to assess artist quality, fit, or reliability.</p>
           </div>
           <div className="problem-item">
-            <div className="problem-num">03</div>
             <h3>No visibility without networks</h3>
-            <p>Opportunities go to who you know. High-potential artists stay undiscovered.</p>
+            <p>Opportunities are largely driven by who you know, leaving high-potential artists undiscovered.</p>
           </div>
           <div className="problem-item">
-            <div className="problem-num">04</div>
             <h3>No progression framework</h3>
-            <p>No benchmarks for artists. No clear path from open-mic to headline slot.</p>
+            <p>There is no clear pathway for artists to develop, improve, and move toward higher-quality opportunities.</p>
           </div>
         </div>
       </div>
