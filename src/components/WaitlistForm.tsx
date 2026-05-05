@@ -28,7 +28,7 @@ export default function WaitlistForm({ source }: WaitlistFormProps) {
       <form className="waitlist-form" onSubmit={handleSubmit}>
         <input
           type="email"
-          placeholder={source === "cta" ? "Enter your email" : "you@yourdomain.com"}
+          placeholder="Enter your email"
           required
           autoComplete="email"
         />
