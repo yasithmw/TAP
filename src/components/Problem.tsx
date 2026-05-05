@@ -3,7 +3,7 @@ export default function Problem() {
     <section className="problem" id="problem">
       <div className="container">
         <div className="section-label">The Disconnect</div>
-        <h2 className="section-title">The live music industry has been <em> <br />left behind.</em></h2>
+        <h2 className="section-title">The live music industry has <span className="nowrap-phrase">been <br className="desktop-break" /><em>left behind.</em></span></h2>
         <p className="section-intro">
           Artist discovery in the live music industry is unstructured and inefficient, leaving a gap between artists and the industry.
         </p>
