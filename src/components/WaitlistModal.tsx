@@ -18,6 +18,8 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
   const [emailVal, setEmailVal] = useState(email);
   const [role, setRole] = useState<"artist" | "venue">("artist");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const nameRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -33,9 +35,24 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim() || !emailVal.trim()) return;
+
+    setLoading(true);
+    setError(false);
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name.trim(), email: emailVal.trim(), role }),
+    });
+    setLoading(false);
+
+    if (!res.ok) {
+      setError(true);
+      return;
+    }
+
     setSubmitted(true);
     setTimeout(() => onClose(), 2800);
   }
@@ -103,8 +120,13 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
                   </button>
                 </div>
               </div>
-              <button type="submit" className="modal-submit">
-                Join Waitlist
+              {error && (
+                <p style={{ color: "#ff6b6b", fontSize: "0.85rem", margin: "0 0 8px" }}>
+                  Something went wrong — please try again.
+                </p>
+              )}
+              <button type="submit" className="modal-submit" disabled={loading}>
+                {loading ? "Submitting…" : "Join Waitlist"}
               </button>
             </form>
           </>

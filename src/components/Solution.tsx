@@ -5,7 +5,7 @@ export default function Solution() {
         <div className="section-label">How it works</div>
         <h2 className="section-title">One platform. <em>Everything connected.</em></h2>
         <p className="section-intro">
-          TAP replaces fragmented discovery with structured intelligence, giving artists a professional presence and while connecting all users with the tools to find, filter, and book.
+          TAP replaces fragmented discovery with structure, giving artists a professional presence and while connecting all users with the tools to find, filter, and book.
         </p>
 
         <div className="steps">
@@ -24,7 +24,7 @@ export default function Solution() {
           <div className="step">
             <div className="step-num">03</div>
             <h3>Match &amp; book</h3>
-            <p>Direct offers replace cold DMs. Both sides arrive at every booking aligned on fit, fee, and expectations, before the first message is sent.</p>
+            <p>Direct offers replace cold DMs. Both sides arrive at every booking aligned on fit, fee, and expectations.</p>
             <div className="step-divider" />
           </div>
           <div className="step">

@@ -10,7 +10,7 @@ export default function CTA() {
   return (
     <section className="cta" id="waitlist">
       <div className="container cta-inner">
-        <div className="eyebrow">Launching July 2026</div>
+        <div className="eyebrow">Launching August 2026</div>
         <h2>Be one of the first <em>inside.</em></h2>
         <p>
           Be first to access TAP, with priority onboarding and early access to real opportunities.

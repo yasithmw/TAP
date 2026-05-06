@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-decor" />
       <div className="container hero-grid">
         <div>
-          <div className="eyebrow reveal r1">Launching Sydney · July 2026 · Pre-registration Open</div>
+          <div className="eyebrow reveal r1">Launching Sydney · August 2026 · Pre-registration Open</div>
           <h1 className="hero-title reveal r2">
             Where musicians<br />
             & <em>opportunity meet.</em>

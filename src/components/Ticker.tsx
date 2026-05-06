@@ -3,7 +3,7 @@ const ITEMS = [
   "Venues",
   "Artists",
   "Industry Marketplace",
-  "Launching July 2026",
+  "Launching August 2026",
   "Pre-registration open",
 ];
 

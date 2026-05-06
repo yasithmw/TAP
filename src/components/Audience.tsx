@@ -23,7 +23,7 @@ export default function Audience() {
           {/* Venues */}
           <div className="aud-card aud-venues">
             <div className="aud-label">For venues</div>
-            <h3>Book <em>more easier.</em></h3>
+            <h3>Booking made <em>easy.</em></h3>
             <p>Stop scrolling. Search verified artists by genre, style, and fit - and fill your calendar with confidence.</p>
             <ul className="aud-features">
               <li>Advanced filtering</li>
