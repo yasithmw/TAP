@@ -15,6 +15,8 @@ interface WaitlistFormProps {
 
 export default function WaitlistForm({ source, role = "artist" }: WaitlistFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [heroEmail, setHeroEmail] = useState("");
   const emailRef = useRef<HTMLInputElement>(null);
@@ -33,6 +35,8 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
     }
 
     const nameInput = form.querySelector("input[type=text]") as HTMLInputElement;
+    setLoading(true);
+    setError(false);
     const res = await fetch("/api/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -42,8 +46,13 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
         role,
       }),
     });
+    setLoading(false);
 
-    if (!res.ok) return;
+    if (!res.ok) {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+      return;
+    }
 
     const inputs = form.querySelectorAll("input");
     setSubmitted(true);
@@ -73,14 +82,20 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
           autoComplete="email"
           className="waitlist-input"
         />
-        <button type="submit" disabled={submitted}>
-          {submitted ? "✓ Request Sent" : "Join waitlist"}
+        <button type="submit" disabled={submitted || loading}>
+          {submitted ? "✓ Request Sent" : loading ? "Submitting…" : "Join waitlist"}
         </button>
       </form>
 
       {source === "cta" && (
         <div className={`success-msg${submitted ? " show" : ""}`}>
           ✓ {successMessages[role] ?? successMessages.artist}
+        </div>
+      )}
+
+      {error && (
+        <div className="success-msg show" style={{ color: "#ff6b6b" }}>
+          Something went wrong — please try again.
         </div>
       )}
 
