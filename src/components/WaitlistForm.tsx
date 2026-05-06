@@ -19,7 +19,7 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
   const [heroEmail, setHeroEmail] = useState("");
   const emailRef = useRef<HTMLInputElement>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const emailInput = form.querySelector("input[type=email]") as HTMLInputElement;
@@ -31,6 +31,19 @@ export default function WaitlistForm({ source, role = "artist" }: WaitlistFormPr
       if (emailRef.current) emailRef.current.value = "";
       return;
     }
+
+    const nameInput = form.querySelector("input[type=text]") as HTMLInputElement;
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: nameInput?.value.trim() ?? "",
+        email: emailInput.value.trim(),
+        role,
+      }),
+    });
+
+    if (!res.ok) return;
 
     const inputs = form.querySelectorAll("input");
     setSubmitted(true);

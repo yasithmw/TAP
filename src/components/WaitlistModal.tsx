@@ -33,9 +33,18 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim() || !emailVal.trim()) return;
+
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name.trim(), email: emailVal.trim(), role }),
+    });
+
+    if (!res.ok) return;
+
     setSubmitted(true);
     setTimeout(() => onClose(), 2800);
   }
