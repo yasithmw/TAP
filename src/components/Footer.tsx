@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon, TiktokLogoIcon } from '@phosphor-icons/react';
 
 export default function Footer() {
   return (
@@ -20,6 +20,7 @@ export default function Footer() {
               <a href="https://www.facebook.com/profile.php?id=61576423880028" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FacebookLogoIcon size={20} weight="light" /></a>
               <a href="https://www.instagram.com/theartistplatform/?hl=en" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><InstagramLogoIcon size={20} weight="light" /></a>
               <a href="https://www.linkedin.com/company/the-artist-platform/?viewAsMember=true" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><LinkedinLogoIcon size={20} weight="light" /></a>
+              <a href="https://www.tiktok.com/@theartistplatform?_r=1&_t=ZS-96Bb2aBVwWr" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokLogoIcon size={20} weight="light" /></a>
             </div>
           </div>
         </div>
