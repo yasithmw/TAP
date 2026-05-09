@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -25,6 +26,12 @@ export const metadata: Metadata = {
   title: "The Artist Platform - Where Musicians & Opportunity Meet",
   description:
     "A gate-kept network for serious artists and the venues, labels and managers looking for them.",
+  icons: {
+    icon: [
+      { url: "/Primary.svg", type: "image/svg+xml" },
+      { url: "/3.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -39,6 +46,7 @@ export default function RootLayout({
       style={{ scrollBehavior: "smooth" }}
     >
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-Q63T7WWE65" />
     </html>
   );
 }
