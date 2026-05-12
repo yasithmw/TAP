@@ -1642,7 +1642,7 @@ html {
 /* Hero */
 @media (max-width: 600px) {
   .hero {
-    padding: 120px 0 60px;
+    padding: 160px 0 20px;
   }
 
   .hero-visual {
@@ -1651,6 +1651,7 @@ html {
 
   .eyebrow {
     margin-bottom: 20px;
+    margin-top: -20px;
   }
 
   h1.hero-title {
@@ -1659,7 +1660,7 @@ html {
 
   .hero-sub {
     font-size: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
 
   .waitlist-meta {
