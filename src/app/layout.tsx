@@ -27,10 +27,8 @@ export const metadata: Metadata = {
   description:
     "A gate-kept network for serious artists and the venues, labels and managers looking for them.",
   icons: {
-    icon: [
-      { url: "/Primary.svg", type: "image/svg+xml" },
-      { url: "/3.png", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
