@@ -1,0 +1,755 @@
+author: ""
+brandUpdateTime: ""
+campaignType: automation_template
+fields: []
+fieldsHistory: []
+firstLoadSocialIcons: false
+font-fallback:
+  default: Arial
+  headings: 'Cormorant Garamond'
+fonts:
+  - 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap'
+hideSwapBanner: false
+id: 7b2c4f8a-3d91-4e02-b175-c6a8d9e10f23
+name: "Welcome to TAP — The Artist Platform"
+subject: 'Welcome to The Artist Platform, {{ contact.FIRSTNAME | default : '''' }}'
+ui:
+  showDeleteOption: false
+  showMoreOption: false
+user-hash: ""
+version: 3.0.1
+body:
+  id: a9f3e7b2-1c04-4d85-9a67-3f8e2b1c5d09
+  type: body
+  layout:
+    320px:
+      width: 320px
+    default:
+      direction: ltr
+      wrapper-width: 560px
+  content:
+    -
+      content-type: wrapper
+      customBlockId: null
+      id: w9a3f7e2-1b04-4c85-8d67-2e9f3b0c4a08
+      isCustomBlock: null
+      moduleName: null
+      sidebarSection: null
+      sync-module-id: null
+      thumbnail: null
+      title: Wrapper
+      type: rows
+      layout:
+        320px:
+          width: 320px
+        default:
+          align: center
+          valign: top
+      content:
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r1111111-1111-1111-1111-111111111111
+          isCustomBlock: null
+          moduleName: viewInBrowser
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: View in browser
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              display: none
+              full-width: true
+              padding-bottom: 5px
+              padding-top: 5px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c1111111-1111-1111-1111-111111111111
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b1111111-1111-1111-1111-111111111111
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: View in browser
+                  type: text
+                  layout:
+                    320px:
+                      padding-left: 10px
+                      padding-right: 10px
+                      width: 100%
+                    default:
+                      align: center
+                      padding-left: 30px
+                      padding-right: 30px
+                      text-align: center
+                      width: 100%
+                  content: '<p><a href="{{ mirror }}"><span style="font-family:arial,helvetica,sans-serif;color:#858588;font-size:12px;text-decoration:underline;">View in browser</span></a></p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r2222222-2222-2222-2222-222222222222
+          isCustomBlock: null
+          moduleName: header
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: null
+          title: Header
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 24px
+              padding-right: 24px
+              width: 100%
+            default:
+              align: center
+              background-color: '#0D0D0D'
+              border-radius: 16px 16px 0 0
+              padding-bottom: 22px
+              padding-left: 40px
+              padding-right: 40px
+              padding-top: 22px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c2222222-2222-2222-2222-222222222222
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b2222222-2222-2222-2222-222222222222
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Logo
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: left
+                      valign: top
+                      width: 100%
+                  content: '<table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td style="vertical-align:middle;"><div style="width:52px;height:52px;border-radius:50%;border:1.5px solid #C9A84C;background-color:#0D0D0D;text-align:center;line-height:52px;display:inline-block;"><span style="font-family:''Cormorant Garamond'',Georgia,serif;font-style:italic;font-size:15px;font-weight:500;color:#EDE8DF;letter-spacing:0.08em;">TAP</span></div></td><td style="padding-left:13px;vertical-align:middle;"><span style="font-family:''Cormorant Garamond'',Georgia,serif;font-style:italic;font-size:22px;font-weight:400;color:#EDE8DF;letter-spacing:0.02em;white-space:nowrap;">The Artist Platform</span></td></tr></table>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r3333333-3333-3333-3333-333333333333
+          isCustomBlock: null
+          moduleName: null
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: null
+          title: Gold Divider Top
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-top: 0px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c3333333-3333-3333-3333-333333333333
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b3333333-3333-3333-3333-333333333333
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Gold Divider
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#C9A84C'
+                      border-style: solid
+                      border-width: 1px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      width: 100%
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r4444444-4444-4444-4444-444444444444
+          isCustomBlock: null
+          moduleName: null
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: null
+          title: Body
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 24px
+              padding-right: 24px
+              width: 100%
+            default:
+              align: center
+              background-color: '#FAF6EE'
+              padding-bottom: 40px
+              padding-left: 40px
+              padding-right: 40px
+              padding-top: 44px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c4444444-4444-4444-4444-444444444444
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b4a44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Eyebrow Divider Top
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#C9A84C'
+                      border-style: solid
+                      border-width: 1px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      width: 100%
+                -
+                  customBlockId: null
+                  id: b4b44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Eyebrow Banner
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: center
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#C9A84C;margin:13px 0;text-align:center;">Early Access Confirmed</p>'
+                -
+                  customBlockId: null
+                  id: b4c44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Eyebrow Divider Bottom
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#C9A84C'
+                      border-style: solid
+                      border-width: 1px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      width: 100%
+                -
+                  customBlockId: null
+                  id: b4d44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Salutation
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 28px
+                      text-align: left
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''Cormorant Garamond'',Georgia,serif;font-weight:400;font-size:25px;line-height:1.05;letter-spacing:-0.01em;color:#0D0D0D;margin:0;">Hi <em style="font-style:italic;color:#C9A84C;font-weight:300;">{{ contact.FIRSTNAME | default : '''' }}</em>,</p>'
+                -
+                  customBlockId: null
+                  id: b4e44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Body Copy
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 28px
+                      text-align: left
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:1.72;color:#2A2D35;font-weight:300;margin:0 0 18px 0;">Thanks for joining The Artist Platform.</p><p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:1.72;color:#2A2D35;font-weight:300;margin:0 0 18px 0;">We''ve received your details and added you to the early access list — you''re now part of the initial group we''re building TAP with ahead of launch.</p><p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:1.72;color:#2A2D35;font-weight:300;margin:0 0 18px 0;">We''re currently preparing for our August launch, and over the coming weeks we''ll be reaching out to guide you through building out your profile and getting set up on the platform.</p><p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:1.72;color:#2A2D35;font-weight:300;margin:0;">You''ll also be kept up to date as we roll things out, share progress, and open up early opportunities. If you have any questions in the meantime, feel free to reply directly to this email.</p>'
+                -
+                  customBlockId: null
+                  id: b4f44444-4444-4444-4444-444444444444
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Sign-off
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 32px
+                      text-align: left
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:1.72;color:#2A2D35;font-weight:300;margin:0 0 4px 0;">Speak soon,</p><p style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;font-weight:300;color:#2A2D35;margin:0 0 2px 0;line-height:1.72;">Ashton.</p><p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#9A9590;margin:0;">The Artist Platform</p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r5555555-5555-5555-5555-555555555555
+          isCustomBlock: null
+          moduleName: null
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: null
+          title: Gold Divider Bottom
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-top: 0px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c5555555-5555-5555-5555-555555555555
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b5555555-5555-5555-5555-555555555555
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Gold Divider Bottom
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#C9A84C'
+                      border-style: solid
+                      border-width: 1px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      width: 100%
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r6666666-6666-6666-6666-666666666666
+          isCustomBlock: null
+          moduleName: null
+          sidebarSection: section
+          sync-module-id: null
+          thumbnail: null
+          title: Footer
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 24px
+              padding-right: 24px
+              width: 100%
+            default:
+              align: center
+              background-color: '#0D0D0D'
+              border-radius: 0 0 16px 16px
+              padding-bottom: 30px
+              padding-left: 40px
+              padding-right: 40px
+              padding-top: 26px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c6666666-6666-6666-6666-666666666666
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b6a66666-6666-6666-6666-666666666666
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Website and Email
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: center
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:9px;letter-spacing:0.2em;color:#ffffff;margin:0 0 8px 0;text-align:center;"><a href="https://theartistplatform.com.au" target="_blank" style="color:#ffffff;text-decoration:none;">theartistplatform.com.au</a>&nbsp;·&nbsp;<a href="mailto:support@theartistplatform.com.au" style="color:#ffffff;text-decoration:none;">support@theartistplatform.com.au</a></p>'
+                -
+                  customBlockId: null
+                  id: b6b66666-6666-6666-6666-666666666666
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Social Icons
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 8px
+                      text-align: center
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:9px;letter-spacing:0.2em;color:#9A9590;margin:0;text-align:center;text-transform:uppercase;"><a href="https://www.instagram.com/theartistplatform/?hl=en" target="_blank" style="color:#ffffff;text-decoration:none;">Instagram</a>&nbsp;·&nbsp;<a href="https://www.linkedin.com/company/the-artist-platform/?viewAsMember=true" target="_blank" style="color:#ffffff;text-decoration:none;">LinkedIn</a>&nbsp;·&nbsp;<a href="https://www.tiktok.com/@theartistplatform_?lang=en" target="_blank" style="color:#ffffff;text-decoration:none;">TikTok</a>&nbsp;·&nbsp;<a href="https://www.facebook.com/profile.php?id=61576423880028" target="_blank" style="color:#ffffff;text-decoration:none;">Facebook</a></p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: r7777777-7777-7777-7777-777777777777
+          isCustomBlock: null
+          moduleName: null
+          sidebarSection: null
+          sync-module-id: null
+          thumbnail: null
+          title: Caption
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              width: 100%
+            default:
+              align: center
+              background-color: '#ffffff'
+              padding-bottom: 48px
+              padding-left: 20px
+              padding-right: 20px
+              padding-top: 18px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: c7777777-7777-7777-7777-777777777777
+              isCustomBlock: null
+              isEmpty: false
+              moduleName: null
+              sidebarSection: null
+              sync-module-id: null
+              thumbnail: null
+              title: column 1
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: b7a77777-7777-7777-7777-777777777777
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: null
+                  title: Copyright
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: center
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#B0A898;margin:0 0 10px 0;text-align:center;">&copy; 2026 The Artist Platform &nbsp;·&nbsp; Sydney, Australia</p>'
+                -
+                  customBlockId: null
+                  id: b7b77777-7777-7777-7777-777777777777
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  sync-module-id: null
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Unsubscribe
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: center
+                      valign: top
+                      width: 100%
+                  content: '<p style="font-family:''JetBrains Mono'',''Courier New'',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#B0A898;margin:0;text-align:center;"><span condition="{{ update_profile }}" style="display:none"><a href="{{ update_profile }}" style="color:#B0A898;text-decoration:underline;">Update preferences</a>&nbsp;·&nbsp;</span><a href="{{ unsubscribe }}" target="_blank" style="color:#B0A898;text-decoration:underline;">Unsubscribe</a></p>'
+media:
+  320px:
+    max-width: 560
+    min-width: 0
+styles:
+  default:
+    properties:
+      color: '#2A2D35'
+      font-family: Inter
+      font-size: 15px
+      font-weight: '300'
+      line-height: '1.72'
+    title: Paragraph
+  default-button:
+    properties:
+      background-color: '#C9A84C'
+      border-radius: 4px
+      border-width: 0px
+      color: '#0D0D0D'
+      font-family: "'JetBrains Mono', 'Courier New', monospace"
+      font-size: 13px
+      remove-vml-button: optional
+      width: 200px
+    title: Button
+  default-heading1:
+    properties:
+      color: '#0D0D0D'
+      font-family: "'Cormorant Garamond', Georgia, serif"
+      font-size: 40px
+      font-style: italic
+      font-weight: '300'
+    title: 'Heading 1'
+  default-heading2:
+    properties:
+      color: '#0D0D0D'
+      font-family: "'Cormorant Garamond', Georgia, serif"
+      font-size: 30px
+      font-style: italic
+      font-weight: '400'
+    title: 'Heading 2'
+  default-heading3:
+    properties:
+      color: '#0D0D0D'
+      font-family: "'Cormorant Garamond', Georgia, serif"
+      font-size: 22px
+      font-weight: '400'
+    title: 'Heading 3'
+  default-heading4:
+    properties:
+      color: '#2A2D35'
+      font-family: Inter
+      font-size: 15px
+      font-weight: '500'
+    title: 'Heading 4'
+  default-link:
+    properties:
+      color: '#C9A84C'
+      text-decoration: none
+    title: Link

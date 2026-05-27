@@ -16,9 +16,12 @@
     </xml>
   </noscript>
   <![endif]-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <style type="text/css">
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
     body,
     table,
     td,
@@ -89,7 +92,7 @@
     <tr>
       <td align="center" style="padding:40px 20px 48px;background-color:#ffffff;">
 
-        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="560" class="email-container" style="max-width:560px;border-radius:16px;overflow:hidden;
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="560" class="email-container" style="max-width:560px;border-radius:16px;overflow:hidden;border-collapse:separate;
                  box-shadow:0 20px 56px -16px rgba(13,13,13,0.14), 0 0 0 1px rgba(13,13,13,0.07);">
 
           <!-- ── HEADER ── -->
@@ -148,7 +151,7 @@
               <p class="hero-name" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;
                          font-size:25px;line-height:1.05;letter-spacing:-0.01em;
                          color:#0D0D0D;margin:0 0 28px 0;">
-                Hi <em style="font-style:italic;color:#C9A84C;font-weight:300;">*|FNAME|*</em>,
+                Hi <em style="font-style:italic;color:#C9A84C;font-weight:300;">{{ contact.FIRSTNAME }}</em>,
               </p>
 
               <!-- Body copy -->
@@ -215,16 +218,19 @@
 
               <!-- Socials -->
               <p style="font-family:'JetBrains Mono','Courier New',monospace;
-                         font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
-                         color:#ffffff;margin:0 0 16px 0;">
-                <a href="https://www.facebook.com/profile.php?id=61576423880028" target="_blank"
-                  style="color:#ffffff;text-decoration:none;">Facebook</a>
-                &nbsp;·&nbsp;
+                         font-size:9px;letter-spacing:0.2em;
+                         color:#9A9590;margin:0 0 16px 0;text-transform:uppercase;">
                 <a href="https://www.instagram.com/theartistplatform/?hl=en" target="_blank"
                   style="color:#ffffff;text-decoration:none;">Instagram</a>
                 &nbsp;·&nbsp;
                 <a href="https://www.linkedin.com/company/the-artist-platform/?viewAsMember=true" target="_blank"
                   style="color:#ffffff;text-decoration:none;">LinkedIn</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.tiktok.com/@theartistplatform_?lang=en" target="_blank"
+                  style="color:#ffffff;text-decoration:none;">TikTok</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.facebook.com/profile.php?id=61576423880028" target="_blank"
+                  style="color:#ffffff;text-decoration:none;">Facebook</a>
               </p>
 
 
