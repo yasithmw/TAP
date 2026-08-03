@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-meta">
-          <span>© 2026 The Artist Platform · Sydney, Australia</span>
+          <span>© 2026 The Artist Platform Pty Ltd · Australia</span>
           <span>Designed &amp; Developed By <a href="https://kainovation.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontWeight: 700 }}>Kainovation Ltd.</a></span>
         </div>
       </div>

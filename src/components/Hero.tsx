@@ -6,14 +6,16 @@ export default function Hero() {
       <div className="hero-decor" />
       <div className="container hero-grid">
         <div>
-          <div className="eyebrow reveal r1">Launching Sydney · August 2026 · Pre-registration Open</div>
+          <div className="eyebrow reveal r1">
+            <span>Launching in Sydney & Brisbane · 25th August 2026 ·<br />Pre-registration open</span>
+          </div>
           <h1 className="hero-title reveal r2">
             Where musicians<br />
             & <em>opportunity meet.</em>
           </h1>
           <p className="hero-sub reveal r3">
-            TAP is a structured digital ecosystem connecting artists, venues, and industry, 
-            giving musicians a professional presence to access real opportunities, and venues the tools to find, filter, and book the right act.
+            TAP is a structured digital ecosystem connecting artists, venues, and industry,
+            giving musicians a professional presence to access real opportunities.
           </p>
 
           <div className="reveal r4">
@@ -21,7 +23,7 @@ export default function Hero() {
           </div>
           <div className="waitlist-meta reveal r4">
             <span className="dot" />
-            <span> Artists and venues across Australia already pre-registered </span>
+            <span> Artists and venues across Launch cities already pre-registered </span>
           </div>
         </div>
 

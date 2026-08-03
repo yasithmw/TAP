@@ -10,7 +10,7 @@ export default function Nav() {
         </a>
         <div className="nav-links">
           <a href="#problem">Why TAP</a>
-          <a href="#how">How it works</a>
+          <a href="#how">How TAP works</a>
           <a href="#who">For whom</a>
           <a href="#waitlist" className="btn-nav">Join waitlist</a>
         </div>

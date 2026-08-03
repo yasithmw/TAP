@@ -1,8 +1,8 @@
 "use client";
 
 const roles = [
-  { key: "artist", label: "I'm an artist" },
-  { key: "venue", label: "It's a venue" },
+  { key: "artist", label: "I'm an Artist" },
+  { key: "venue", label: "I Represent a Venue / Service" },
 ];
 
 interface RoleSelectorProps {

@@ -116,7 +116,7 @@ export default function WaitlistModal({ email, onClose }: WaitlistModalProps) {
                     className={`modal-role-chip${role === "venue" ? " active" : ""}`}
                     onClick={() => setRole("venue")}
                   >
-                    Venue
+                    Venue / Service
                   </button>
                 </div>
               </div>

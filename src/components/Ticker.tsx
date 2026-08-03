@@ -1,10 +1,11 @@
 const ITEMS = [
-  "Live music Sydney",
-  "Venues",
-  "Artists",
-  "Industry Marketplace",
-  "Launching August 2026",
-  "Pre-registration open",
+  "Professional Profiles",
+  "Artist Collaboration",
+  "Venue Discovery",
+  "Trusted Marketplace",
+  "Career Resources",
+  "Sydney & Brisbane",
+  "Live 25th of August 2026",
 ];
 
 function TickerItems() {
